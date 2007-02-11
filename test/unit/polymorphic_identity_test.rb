@@ -1,7 +1,19 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
+Comment.class_eval do
+  public :find_polymorphic_association_name
+end
+
 class PolymorphicIdentityTest < Test::Unit::TestCase
   fixtures :authors, :articles, :pages, :users, :comments
+  
+  def test_find_polymorphic_association_name
+    c = Comment.new
+    c.commenter_type = 'Article'
+    assert_equal :commenter, c.find_polymorphic_association_name(:article)
+    assert_equal :commenter, c.find_polymorphic_association_name('article')
+    assert_equal nil, c.find_polymorphic_association_name('page')
+  end
   
   def test_no_value
     ([Comment.new] + Comment.find(:all)).each do |c|

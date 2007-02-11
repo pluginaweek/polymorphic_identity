@@ -1,6 +1,7 @@
 = polymorphic_identity
 
-polymorphic_identity .
+polymorphic_identity dynamically generates aliases for polymorphic associations
+based on the class names of those associations.
 
 == Resources
 
@@ -10,7 +11,7 @@ Wiki
 
 Announcement
 
-* http://www.pluginaweek.org/
+* http://www.pluginaweek.org/2007/02/12/12-polymorphic-association-seeks-damages-for-identity-theft
 
 Source
 
@@ -22,3 +23,48 @@ Development
 
 == Description
 
+Polymorphic associations are not very descriptive when it comes to easily
+knowing the type of model your interacting with.  For example, a typical
+polymorphic assocation looks like the following:
+
+  class Tag < ActiveRecord::Base
+    belongs_to :taggable,
+                 :polymorphic => true
+  end
+
+When getting the taggable record, you would normally have to called
++tag.taggable+.  However, if you know that the taggable record is just an
+instance of the Article model, then it would feel more comfortable if you could
+just called +tag.article+.  polymoprhic_identity makes this possible by
+dynamically checking the name of the polymorphic record's class and creating
+methods that allow you to access the polymorphic association based on that
+class name.
+
+== Example
+
+  class Comment < ActiveRecord::Base
+    belongs_to :commentable,
+                 :polymorphic => true
+    belongs_to :commenter,
+                 :polymorphic => true
+  end
+  
+  class Article < ActiveRecord::Base
+    has_many :comments, :as => :commentable
+  end
+  
+  class User < ActiveRecord::Base
+    has_many :comments,
+               :as => :commenter
+  end
+  
+  >> c = Comment.find(1)
+  => #<Tag:0xb784d32c @attributes={"id"=>"1", "commentable_type"=>"Article", "commentable_id"=>"1", "commenter_type"=>"User", "commenter_id"=>"1"}>
+  >> c.commentable
+  => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
+  >> c.article
+  => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
+  >> c.commenter
+  => #<User:0xb775d764 @attributes={"id"=>"1"}>
+  >> c.user
+  => #<User:0xb775d764 @attributes={"id"=>"1"}>

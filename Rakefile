@@ -14,7 +14,7 @@ task :default => :test
 desc 'Test the polymorphic_identity plugin.'
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'
-  t.pattern = 'test/unit/**/*_test.rb'
+  t.pattern = 'test/**/*_test.rb'
   t.verbose = true
 end
 
@@ -37,7 +37,7 @@ spec = Gem::Specification.new do |s|
   s.require_path    = 'lib'
   s.autorequire     = 'polymorphic_identity'
   s.has_rdoc        = true
-  s.test_files      = Dir['test/unit/**/*_test.rb']
+  s.test_files      = Dir['test/**/*_test.rb']
   s.add_dependency  'activerecord', '>= 1.15.0'
   
   s.author          = 'Aaron Pfeifer, Neil Abraham s.email           = 'info@pluginaweek.org'

@@ -7,15 +7,25 @@ end
 class PolymorphicIdentityTest < Test::Unit::TestCase
   fixtures :authors, :articles, :pages, :users, :comments
   
-  def test_find_polymorphic_association_name
+  def test_should_find_polymorphic_association_name_for_valid_symbolized_association
     c = Comment.new
     c.commenter_type = 'Article'
     assert_equal :commenter, c.find_polymorphic_association_name(:article)
+  end
+  
+  def test_should_find_polymorphic_association_name_for_valid_stringified_association
+    c = Comment.new
+    c.commenter_type = 'Article'
     assert_equal :commenter, c.find_polymorphic_association_name('article')
+  end
+  
+  def test_should_not_find_polymorphic_association_name_for_invalid_association
+    c = Comment.new
+    c.commenter_type = 'Article'
     assert_equal nil, c.find_polymorphic_association_name('page')
   end
   
-  def test_no_value
+  def test_should_not_respond_to_polymorhic_association_name_if_association_is_nil
     ([Comment.new] + Comment.find(:all)).each do |c|
       c.commentable = nil if c.commentable
       c.commenter = nil if c.commenter
@@ -27,7 +37,7 @@ class PolymorphicIdentityTest < Test::Unit::TestCase
     end
   end
   
-  def test_existing_value
+  def test_should_respond_to_polymorphic_association_name_if_association_exists
     c = comments(:article_test_author_john_doe)
     assert c.respond_to?(:article)
     assert c.respond_to?(:author)
@@ -41,7 +51,7 @@ class PolymorphicIdentityTest < Test::Unit::TestCase
     assert_equal users(:anonymous), c.user
   end
   
-  def test_change_value
+  def test_should_update_response_when_changing_polymorphic_association
     c = comments(:article_test_author_john_doe)
     c.commentable = pages(:about)
     c.commenter = users(:anonymous)

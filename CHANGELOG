@@ -1,5 +1,15 @@
 *SVN*
 
+*0.0.2* (August 5th, 2007)
+
+* Add api documentation
+
+* Fix Rakefile syntax errors
+
+* Refactor tests
+
+* Use the plugin_test_helper plugin for helping create a Rails environment
+
 *0.0.1* (February 12th, 2007)
 
 * Initial release

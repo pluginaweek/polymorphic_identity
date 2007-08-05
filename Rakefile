@@ -4,7 +4,7 @@ require 'rake/gempackagetask'
 require 'rake/contrib/sshpublisher'
 
 PKG_NAME           = 'polymorphic_identity'
-PKG_VERSION        = '0.0.1'
+PKG_VERSION        = '0.0.2'
 PKG_FILE_NAME      = "#{PKG_NAME}-#{PKG_VERSION}"
 RUBY_FORGE_PROJECT = 'pluginaweek'
 
@@ -40,7 +40,8 @@ spec = Gem::Specification.new do |s|
   s.test_files      = Dir['test/**/*_test.rb']
   s.add_dependency  'activerecord', '>= 1.15.0'
   
-  s.author          = 'Aaron Pfeifer, Neil Abraham s.email           = 'info@pluginaweek.org'
+  s.author          = 'Aaron Pfeifer, Neil Abraham'
+  s.email           = 'info@pluginaweek.org'
   s.homepage        = 'http://www.pluginaweek.org'
 end
   

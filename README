@@ -72,3 +72,10 @@ class name.
   => #<User:0xb775d764 @attributes={"id"=>"1"}>
   >> c.user
   => #<User:0xb775d764 @attributes={"id"=>"1"}>
+
+== Testing
+
+This plugin requires that the plugin_test_helper gem be installed in order to
+run the unit tests.  To install this gem:
+
+  gem install plugin_test_helper

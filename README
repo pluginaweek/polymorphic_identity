@@ -1,6 +1,6 @@
 = polymorphic_identity
 
-polymorphic_identity dynamically generates aliases for polymorphic associations
++polymorphic_identity+ dynamically generates aliases for polymorphic associations
 based on the class names of those associations.
 
 == Resources
@@ -78,4 +78,8 @@ class name.
 == Testing
 
 Before you can run any tests, the following gem must be installed:
-* plugin_test_helper - http://wiki.pluginaweek.org/Plugin_test_helper
+* plugin_test_helper[http://wiki.pluginaweek.org/Plugin_test_helper]
+
+== Dependencies
+
+This plugin does not depend on the presence of any other plugin.

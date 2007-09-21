@@ -1,5 +1,9 @@
 *SVN*
 
+* Move test fixtures out of the test application root directory
+
+* Remove gem dependency on activerecord
+
 *0.0.2* (August 5th, 2007)
 
 * Add api documentation

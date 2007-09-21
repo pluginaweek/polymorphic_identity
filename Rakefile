@@ -38,7 +38,6 @@ spec = Gem::Specification.new do |s|
   s.autorequire     = 'polymorphic_identity'
   s.has_rdoc        = true
   s.test_files      = Dir['test/**/*_test.rb']
-  s.add_dependency  'activerecord', '>= 1.15.0'
   
   s.author          = 'Aaron Pfeifer, Neil Abraham'
   s.email           = 'info@pluginaweek.org'

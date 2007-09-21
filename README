@@ -44,7 +44,9 @@ dynamically checking the name of the polymorphic record's class and creating
 methods that allow you to access the polymorphic association based on that
 class name.
 
-== Example
+== Usage
+
+=== Example
 
   class Comment < ActiveRecord::Base
     belongs_to :commentable,
@@ -75,7 +77,5 @@ class name.
 
 == Testing
 
-This plugin requires that the plugin_test_helper gem be installed in order to
-run the unit tests.  To install this gem:
-
-  gem install plugin_test_helper
+Before you can run any tests, the following gem must be installed:
+* plugin_test_helper - http://wiki.pluginaweek.org/Plugin_test_helper

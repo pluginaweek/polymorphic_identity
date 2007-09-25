@@ -1,28 +1,24 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-Comment.class_eval do
-  public :find_polymorphic_association_name
-end
-
 class PolymorphicIdentityTest < Test::Unit::TestCase
   fixtures :authors, :articles, :pages, :users, :comments
   
   def test_should_find_polymorphic_association_name_for_valid_symbolized_association
     c = Comment.new
     c.commenter_type = 'Article'
-    assert_equal :commenter, c.find_polymorphic_association_name(:article)
+    assert_equal :commenter, c.send(:find_polymorphic_association_name, :article)
   end
   
   def test_should_find_polymorphic_association_name_for_valid_stringified_association
     c = Comment.new
     c.commenter_type = 'Article'
-    assert_equal :commenter, c.find_polymorphic_association_name('article')
+    assert_equal :commenter, c.send(:find_polymorphic_association_name, 'article')
   end
   
   def test_should_not_find_polymorphic_association_name_for_invalid_association
     c = Comment.new
     c.commenter_type = 'Article'
-    assert_equal nil, c.find_polymorphic_association_name('page')
+    assert_equal nil, c.send(:find_polymorphic_association_name, 'page')
   end
   
   def test_should_not_respond_to_polymorhic_association_name_if_association_is_nil

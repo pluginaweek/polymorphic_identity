@@ -5,25 +5,25 @@ based on the class names of those associations.
 
 == Resources
 
-API
+Announcement
 
-* http://api.pluginaweek.org/polymorphic_identity
+* http://www.pluginaweek.org/2007/02/12/12-models-seek-damages-for-identity-theft
 
 Wiki
 
 * http://wiki.pluginaweek.org/Polymorphic_Identity
 
-Announcement
+API
 
-* http://www.pluginaweek.org/2007/02/12/12-models-seek-damages-for-identity-theft
-
-Source
-
-* http://svn.pluginaweek.org/trunk/plugins/active_record/associations/polymorphic_identity
+* http://api.pluginaweek.org/polymorphic_identity
 
 Development
 
 * http://dev.pluginaweek.org/browser/trunk/plugins/active_record/associations/polymorphic_identity
+
+Source
+
+* http://svn.pluginaweek.org/trunk/plugins/active_record/associations/polymorphic_identity
 
 == Description
 

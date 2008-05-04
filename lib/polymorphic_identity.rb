@@ -39,16 +39,16 @@ module PluginAWeek
     end
     
     private
-    # Finds the name of the polymorphic association whose foreign type is set to
-    # the value specified.
-    def find_polymorphic_association_name(foreign_type_value)
-      foreign_type_value = foreign_type_value.to_s.camelize
-      reflection = self.class.reflections.values.find do |reflection|
-        reflection.options[:polymorphic] && read_attribute(reflection.options[:foreign_type]) == foreign_type_value
+      # Finds the name of the polymorphic association whose foreign type is set to
+      # the value specified.
+      def find_polymorphic_association_name(foreign_type_value)
+        foreign_type_value = foreign_type_value.to_s.camelize
+        reflection = self.class.reflections.values.find do |reflection|
+          reflection.options[:polymorphic] && self[reflection.options[:foreign_type]] == foreign_type_value
+        end
+        
+        reflection ? reflection.name : nil
       end
-      
-      reflection ? reflection.name : nil
-    end
   end
 end
 

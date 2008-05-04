@@ -1,8 +1,8 @@
 class CreateArticles < ActiveRecord::Migration
   def self.up
     create_table :articles do |t|
-      t.column :author_id,  :integer
-      t.column :content,    :text
+      t.integer :author_id
+      t.text :content
     end
   end
   

@@ -1,9 +1,0 @@
-about:
-  id: 1
-  author_id: 1
-  content: A little section about us
-  
-projects:
-  id: 2
-  author_id: 2
-  content: A little section about the projects we do

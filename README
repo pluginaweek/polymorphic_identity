@@ -5,10 +5,6 @@ based on the class names of those associations.
 
 == Resources
 
-Announcement
-
-* http://www.pluginaweek.org/2007/02/12/12-models-seek-damages-for-identity-theft
-
 Wiki
 
 * http://wiki.pluginaweek.org/Polymorphic_Identity
@@ -19,11 +15,11 @@ API
 
 Development
 
-* http://dev.pluginaweek.org/browser/trunk/plugins/active_record/associations/polymorphic_identity
+* http://dev.pluginaweek.org/browser/trunk/polymorphic_identity
 
 Source
 
-* http://svn.pluginaweek.org/trunk/plugins/active_record/associations/polymorphic_identity
+* http://svn.pluginaweek.org/trunk/polymorphic_identity
 
 == Description
 
@@ -82,4 +78,4 @@ Before you can run any tests, the following gem must be installed:
 
 == Dependencies
 
-This plugin does not depend on the presence of any other plugin.
+None.

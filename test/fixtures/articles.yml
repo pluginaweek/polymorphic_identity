@@ -1,9 +1,0 @@
-test:
-  id: 1
-  author_id: 1
-  content: This is a test of the Emergency Broadcast System. If this had been an actual emergency...
-  
-welcome:
-  id: 2
-  author_id: 2
-  content: Welcome!

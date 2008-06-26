@@ -5,21 +5,21 @@ based on the class names of those associations.
 
 == Resources
 
-Wiki
-
-* http://wiki.pluginaweek.org/Polymorphic_Identity
-
 API
 
 * http://api.pluginaweek.org/polymorphic_identity
 
+Bugs
+
+* http://pluginaweek.lighthouseapp.com/projects/13285-polymorphic_identity
+
 Development
 
-* http://dev.pluginaweek.org/browser/trunk/polymorphic_identity
+* http://github.com/pluginaweek/polymorphic_identity
 
 Source
 
-* http://svn.pluginaweek.org/trunk/polymorphic_identity
+* git://github.com/pluginaweek/polymorphic_identity.git
 
 == Description
 
@@ -74,7 +74,7 @@ class name.
 == Testing
 
 Before you can run any tests, the following gem must be installed:
-* plugin_test_helper[http://wiki.pluginaweek.org/Plugin_test_helper]
+* plugin_test_helper[http://github.com/pluginaweek/plugin_test_helper]
 
 To run against a specific version of Rails:
 

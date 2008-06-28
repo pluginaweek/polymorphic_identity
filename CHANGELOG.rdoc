@@ -1,29 +1,25 @@
-*SVN*
+== master
 
-*0.0.5* (June 22nd, 2008)
+== 0.0.5 / 2008-06-22
 
 * Remove log files from gems
 
-*0.0.4* (May 5th, 2008)
+== 0.0.4 / 2008-05-05
 
 * Updated documentation
 
-*0.0.3* (September 26th, 2007)
+== 0.0.3 / 2007-09-26
 
 * Move test fixtures out of the test application root directory
-
 * Remove gem dependency on activerecord
 
-*0.0.2* (August 5th, 2007)
+== 0.0.2 / 2007-08-05
 
 * Add api documentation
-
 * Fix Rakefile syntax errors
-
 * Refactor tests
-
 * Use the plugin_test_helper plugin for helping create a Rails environment
 
-*0.0.1* (February 12th, 2007)
+== 0.0.1 / 2007-02-12
 
 * Initial release

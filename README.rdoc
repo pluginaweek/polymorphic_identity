@@ -32,10 +32,10 @@ polymorphic assocation looks like the following:
                  :polymorphic => true
   end
 
-When getting the taggable record, you would normally have to called
-+tag.taggable+.  However, if you know that the taggable record is just an
+When getting the taggable record, you would normally have to call
+<tt>tag.taggable</tt>.  However, if you know that the taggable record is just an
 instance of the Article model, then it would feel more comfortable if you could
-just called +tag.article+.  polymoprhic_identity makes this possible by
+just call <tt>tag.article</tt>.  polymoprhic_identity makes this possible by
 dynamically checking the name of the polymorphic record's class and creating
 methods that allow you to access the polymorphic association based on that
 class name.
@@ -60,16 +60,11 @@ class name.
                :as => :commenter
   end
   
-  >> c = Comment.find(1)
-  => #<Tag:0xb784d32c @attributes={"id"=>"1", "commentable_type"=>"Article", "commentable_id"=>"1", "commenter_type"=>"User", "commenter_id"=>"1"}>
-  >> c.commentable
-  => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
-  >> c.article
-  => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
-  >> c.commenter
-  => #<User:0xb775d764 @attributes={"id"=>"1"}>
-  >> c.user
-  => #<User:0xb775d764 @attributes={"id"=>"1"}>
+  c = Comment.find(1)   # => #<Tag id: 1, commentable_id: 1, commentable_type: "Article", commenter_id: 1, commenter_type: "User"}>
+  c.commentable         # => #<Article id: 1>
+  c.article             # => #<Article id: 1>
+  c.commenter           # => #<User id: 1>
+  c.user                # => #<User id: 1>
 
 == Testing
 

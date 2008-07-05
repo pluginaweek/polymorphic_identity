@@ -10,12 +10,9 @@ module PluginAWeek
   #     has_many :tags, :as => :taggable
   #   end
   #   
-  #   >> t = Tag.find(1)
-  #   => #<Tag:0xb784d32c @attributes={"id"=>"1", "taggable_type"=>"Article", "taggable_id"=>"1"}>
-  #   >> t.taggable
-  #   => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
-  #   >> t.article
-  #   => #<Article:0xb779d5a8 @attributes={"id"=>"1"}>
+  #   t = Tag.find(1)   # => #<Tag id: 1, taggable_id: 1, taggable_type: "Article">
+  #   t.taggable        # => #<Article id: 1>
+  #   t.article         # => #<Article id: 1>
   module PolymorphicIdentity
     def self.included(base) #:nodoc:
       base.class_eval do

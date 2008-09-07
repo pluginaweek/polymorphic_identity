@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.summary           = 'Dynamically generates aliases for polymorphic associations based on their class names'
   
-  s.files             = FileList['{lib,test}/**/*'].to_a - FileList['test/app_root/log/*'].to_a + %w(CHANGELOG.rdoc init.rb LICENSE Rakefile README.rdoc)
+  s.files             = FileList['{lib,test}/**/*'] + %w(CHANGELOG.rdoc init.rb LICENSE Rakefile README.rdoc) - FileList['test/app_root/{log,log/*,script,script/*}']
   s.require_path      = 'lib'
   s.has_rdoc          = true
   s.test_files        = Dir['test/**/*_test.rb']

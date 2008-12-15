@@ -5,7 +5,7 @@ require 'rake/contrib/sshpublisher'
 
 spec = Gem::Specification.new do |s|
   s.name              = 'polymorphic_identity'
-  s.version           = '0.0.5'
+  s.version           = '0.1.0'
   s.platform          = Gem::Platform::RUBY
   s.summary           = 'Dynamically generates aliases for polymorphic associations based on their class names'
   

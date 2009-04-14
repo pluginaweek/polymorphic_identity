@@ -28,8 +28,7 @@ knowing the type of model your interacting with.  For example, a typical
 polymorphic assocation looks like the following:
 
   class Tag < ActiveRecord::Base
-    belongs_to :taggable,
-                 :polymorphic => true
+    belongs_to :taggable, :polymorphic => true
   end
 
 When getting the taggable record, you would normally have to call
@@ -45,10 +44,8 @@ class name.
 === Example
 
   class Comment < ActiveRecord::Base
-    belongs_to :commentable,
-                 :polymorphic => true
-    belongs_to :commenter,
-                 :polymorphic => true
+    belongs_to :commentable, :polymorphic => true
+    belongs_to :commenter, :polymorphic => true
   end
   
   class Article < ActiveRecord::Base
@@ -56,8 +53,7 @@ class name.
   end
   
   class User < ActiveRecord::Base
-    has_many :comments,
-               :as => :commenter
+    has_many :comments, :as => :commenter
   end
   
   c = Comment.find(1)   # => #<Tag id: 1, commentable_id: 1, commentable_type: "Article", commenter_id: 1, commenter_type: "User"}>

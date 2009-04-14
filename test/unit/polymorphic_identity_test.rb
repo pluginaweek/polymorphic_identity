@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class PolymorphicIdentityTest < Test::Unit::TestCase
+class PolymorphicIdentityTest < ActiveSupport::TestCase
   def setup
     @comment = Comment.new
     @comment.commenter_type = 'Article'
@@ -19,7 +19,7 @@ class PolymorphicIdentityTest < Test::Unit::TestCase
   end
 end
 
-class PolymorphicAssociationWithNoValueTest < Test::Unit::TestCase
+class PolymorphicAssociationWithNoValueTest < ActiveSupport::TestCase
   def setup
     @comment = create_comment(:commentable => nil, :commenter => nil)
   end
@@ -32,7 +32,7 @@ class PolymorphicAssociationWithNoValueTest < Test::Unit::TestCase
   end
 end
 
-class PolymorphicAssociationsWithValueTest < Test::Unit::TestCase
+class PolymorphicAssociationsWithValueTest < ActiveSupport::TestCase
   def setup
     @author = create_author
     @article = create_article(:author => @author)

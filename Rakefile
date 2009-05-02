@@ -7,7 +7,8 @@ spec = Gem::Specification.new do |s|
   s.name              = 'polymorphic_identity'
   s.version           = '0.1.0'
   s.platform          = Gem::Platform::RUBY
-  s.summary           = 'Dynamically generates aliases for polymorphic associations based on their class names'
+  s.summary           = 'Dynamically generates aliases for polymorphic ActiveRecord associations based on their class names'
+  s.description       = s.summary
   
   s.files             = FileList['{lib,test}/**/*'] + %w(CHANGELOG.rdoc init.rb LICENSE Rakefile README.rdoc) - FileList['test/app_root/{log,log/*,script,script/*}']
   s.require_path      = 'lib'

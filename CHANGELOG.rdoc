@@ -1,5 +1,7 @@
 == master
 
+* Release gems via rake-gemcutter instead of rubyforge
+
 == 0.1.0 / 2008-12-14
 
 * Remove the PluginAWeek namespace

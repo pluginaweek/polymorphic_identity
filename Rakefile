@@ -6,7 +6,7 @@ require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |s|
   s.name              = 'polymorphic_identity'
-  s.version           = '0.1.0'
+  s.version           = '0.1.1'
   s.platform          = Gem::Platform::RUBY
   s.summary           = 'Dynamically generates aliases for polymorphic ActiveRecord associations based on their class names'
   s.description       = s.summary

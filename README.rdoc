@@ -7,7 +7,7 @@ based on the class names of those associations.
 
 API
 
-* http://rdoc.info/projects/pluginaweek/polymorphic_identity
+* http://rdoc.info/github/pluginaweek/polymorphic_identity/master/frames
 
 Bugs
 

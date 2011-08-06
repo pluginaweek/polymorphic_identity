@@ -1,4 +1,4 @@
-= polymorphic_identity
+= polymorphic_identity http://travis-ci.org/pluginaweek/polymorphic_identity.png
 
 +polymorphic_identity+ dynamically generates aliases for polymorphic associations
 based on the class names of those associations.
@@ -16,6 +16,10 @@ Bugs
 Development
 
 * http://github.com/pluginaweek/polymorphic_identity
+
+Testing
+
+* http://travis-ci.org/pluginaweek/polymorphic_identity
 
 Source
 

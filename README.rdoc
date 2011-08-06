@@ -21,6 +21,10 @@ Source
 
 * git://github.com/pluginaweek/polymorphic_identity.git
 
+Mailing List
+
+* http://groups.google.com/group/pluginaweek-talk
+
 == Description
 
 Polymorphic associations are not very descriptive when it comes to easily
